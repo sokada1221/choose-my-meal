@@ -86,4 +86,4 @@ To ensure you are never charged unexpectedly:
     -   **Recommended Cap**: Set "Requests per day" to **30**.
         -   *Reasoning*: The "Place Details (Atmosphere)" SKU (triggered by fetching reviews) has a free monthly limit of **1,000 requests**.
         -   30 requests/day * 30 days = 900 requests, which keeps you safely within the free tier.
-    -   For Gemini, the Free Tier for **gemini-flash-latest** has **no daily request limit** and generous rate limits (e.g., 15 RPM), which is plenty.
+    -   For Gemini, the Free Tier for **gemini-3-flash-preview** has **no daily request limit** and generous rate limits (e.g., 15 RPM), which is plenty.

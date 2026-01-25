@@ -5,7 +5,7 @@ from typing import List
 class MenuAnalyzer:
     def __init__(self, api_key: str):
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-flash-latest')
+        self.model = genai.GenerativeModel('gemini-3-flash-preview')
 
     def analyze_reviews(self, restaurant_name: str, reviews: List[str]) -> List[str]:
         """
