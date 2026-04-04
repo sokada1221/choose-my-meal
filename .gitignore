@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Virtual Environment
-venv/
+.venv/
 env/
 
 # Environment Variables
@@ -17,5 +17,5 @@ env/
 # OS
 .DS_Store
 
-# direnv
-CACHEDIR.TAG
+# mise local overrides
+.mise.local.toml

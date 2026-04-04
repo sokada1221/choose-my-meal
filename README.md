@@ -9,7 +9,7 @@ A CLI tool to help choose lunch by fetching restaurant ratings from Google Maps 
 - **Sorting**: Automatically sorts results by restaurant rating.
 
 ## Prerequisites
-- Python 3.x
+- [mise](https://mise.jdx.dev/) (recommended) or Python 3.x with `venv` available
 - **Google Maps Platform API Key** (Places API enabled)
 - **Google Gemini API Key**
 
@@ -33,14 +33,18 @@ A CLI tool to help choose lunch by fetching restaurant ratings from Google Maps 
 
 1.  **Clone the repository** (if applicable) or navigate to the project directory.
 
-2.  **Create and activate a virtual environment**:
+2.  **Install the toolchain and dependencies** (with [mise](https://mise.jdx.dev/)):
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    mise trust
+    mise install
+    mise run install
     ```
+    Mise creates a `.venv` in the project directory and uses the Python version pinned in `mise.toml`.
 
-3.  **Install dependencies**:
+    **Without mise**, create and activate a virtual environment, then install dependencies:
     ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
     pip install -r requirements.txt
     ```
 
@@ -57,10 +61,11 @@ A CLI tool to help choose lunch by fetching restaurant ratings from Google Maps 
 
 ## Usage
 
-Run the main script:
+Run the main script from the project directory:
 ```bash
 python main.py
 ```
+With mise, use an activated shell (`mise activate`) or `mise exec -- python main.py` so the project virtual environment is on your `PATH`.
 
 Follow the prompts to enter a list of restaurant names (comma-separated).
 
